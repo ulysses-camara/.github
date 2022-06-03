@@ -71,3 +71,6 @@ class clusterComments,mapToDocument,expandQuery,lookForReferenced,lookForSimilar
         - (microservice) look-for-referenced;
         - (microservice) expand-query;
         - (microservice) save-relevance-feedback.
+
+## Publication code
+Additional research code meant for scientific publication is available at [Ulysses (publicações)](https://github.com/Convenio-Camara-dos-Deputados).
