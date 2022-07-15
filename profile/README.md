@@ -46,7 +46,7 @@ linkStyle 8 stroke-width:0px;
 
 classDef default fill:#333333,color:white,stroke-width:2px,stroke:#AAAAAA;
 classDef clsBaseModule fill:#4D644D;
-classDef clsIntegrationModule fill:#644D51,font-size:13px;
+classDef clsIntegrationModule fill:#644D51,font-size:13px,color:white;
 classDef clsMicroservice fill:#514D64,font-size:16px;
 
 class optimizer,curiosity,segmenter,fetcher clsBaseModule;
