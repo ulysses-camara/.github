@@ -7,51 +7,53 @@ Ulysses project contains machine learning modules designed to the Brazil's Chamb
 ```mermaid
 flowchart LR
 
-optimizer("Ulysses Optimizer")
-curiosity("Ulysses Curiosity")
-segmenter("Ulysses Segmenter")
-fetcher("Ulysses Fetcher")
+package_optimizer("Ulysses Optimizer")
+package_curiosity("Ulysses Curiosity")
+package_segmenter("Ulysses Segmenter")
+package_fetcher("Ulysses Fetcher")
 
-subgraph comparer["Ulysses Document Comparer"]
+subgraph microservice_comparer["Ulysses Document Comparer"]
     direction TB
-    expandQuery["expand-query"]
-    lookForReferenced["look-for-referenced"]
-    lookForSimilar["look-for-similar"]
-    saveRelevanceFeedback["save-relevance-feedback"]
+    microservice_expandQuery["expand-query"]
+    microservice_lookForReferenced["look-for-referenced"]
+    microservice_lookForSimilar["look-for-similar"]
+    microservice_saveRelevanceFeedback["save-relevance-feedback"]
 
-    expandQuery --- lookForReferenced --- lookForSimilar --- saveRelevanceFeedback
+    microservice_expandQuery --- microservice_lookForReferenced --- microservice_lookForSimilar --- microservice_saveRelevanceFeedback
 
     linkStyle 0 stroke-width:0px;
     linkStyle 1 stroke-width:0px;
     linkStyle 2 stroke-width:0px;
 end
 
-subgraph analyzer["Ulysses Argumentation Analyzer"]
+subgraph microservice_analyzer["Ulysses Argumentation Analyzer"]
     direction TB
-    clusterComments
-    mapToDocument
+    microservice_clusterComments
+    microservice_mapToDocument
 
-    clusterComments --- mapToDocument
+    microservice_clusterComments --- microservice_mapToDocument
 
     linkStyle 3 stroke-width:0px;
 end
 
-segmenter --> analyzer
-fetcher   --> analyzer
-fetcher   --> segmenter
-optimizer --> analyzer
+package_segmenter --> microservice_analyzer
+package_fetcher   --> microservice_analyzer
+package_optimizer --> microservice_analyzer
+package_fetcher   --> package_segmenter
+package_fetcher   --> package_curiosity
 
-analyzer --- comparer
-linkStyle 8 stroke-width:0px;
+microservice_analyzer --- microservice_comparer
+linkStyle 9 stroke-width:0px;
 
 classDef default fill:#333333,color:white,stroke-width:2px,stroke:#AAAAAA;
 classDef clsBaseModule fill:#4D644D;
 classDef clsIntegrationModule fill:#644D51,font-size:13px,color:white;
 classDef clsMicroservice fill:#514D64,font-size:16px;
 
-class optimizer,curiosity,segmenter,fetcher clsBaseModule;
-class analyzer,comparer clsIntegrationModule;
-class clusterComments,mapToDocument,expandQuery,lookForReferenced,lookForSimilar,saveRelevanceFeedback clsMicroservice;
+class package_optimizer,package_curiosity,package_segmenter,package_fetcher clsBaseModule;
+class microservice_analyzer,microservice_comparer clsIntegrationModule;
+class microservice_clusterComments,microservice_mapToDocument clsMicroservice;
+class microservice_expandQuery,microservice_lookForReferenced,microservice_lookForSimilar,microservice_saveRelevanceFeedback clsMicroservice;
 ```
 
 ---
