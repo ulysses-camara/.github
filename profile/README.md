@@ -28,8 +28,8 @@ end
 
 subgraph microservice_analyzer["Ulysses Argumentation Analyzer"]
     direction TB
-    microservice_clusterComments
-    microservice_mapToDocument
+    microservice_clusterComments["clusterComments"]
+    microservice_mapToDocument["mapToDocument (map2doc)"]
 
     microservice_clusterComments --- microservice_mapToDocument
 
