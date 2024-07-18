@@ -16,7 +16,7 @@ Ulysses is a comprehensive set of machine learning modules tailored specifically
 
 - GARCIA, Eduardo; et al. (2024) RoBERTaLexPT: A Legal RoBERTa Model pretrained with deduplication for Portuguese. 16th International Conference on Computational Processing of Portuguese (PROPOR 2024). Qualis A4
 
-- Siqueira, Felipe A., Vitório, Douglas, Souza, Ellen, Santos, José A. P., Albuquerque, Hidelberg O., Dias, Márcio S., Silva, Nádia F. F., de Carvalho, André C. P. L. F., Oliveira, Adriano L. I., and Bastos-Filho, Carmelo. 2024. "Ulysses Tesemõ: a new large corpus for Brazilian legal and governmental domain." *Language Resources and Evaluation*. https://doi.org/10.1007/s10579-024-09762-8.
+- Siqueira, Felipe A., Vitório, Douglas, Souza, Ellen, Santos, José A. P., Albuquerque, Hidelberg O., Dias, Márcio S., Silva, Nádia F. F., de Carvalho, André C. P. L. F., Oliveira, Adriano L. I., and Bastos-Filho, Carmelo. 2024. "Ulysses Tesemõ: a new large corpus for Brazilian legal and governmental domain." *Language Resources and Evaluation*. https://doi.org/10.1007/s10579-024-09762-8. Qualis A1
 
 ### 2023
 
